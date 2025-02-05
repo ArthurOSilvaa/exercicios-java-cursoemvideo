@@ -30,13 +30,20 @@ public class ExercicioRepeticao {
          n = Integer.parseInt(JOptionPane.showInputDialog(null, 
                  "<html>Informe um número: <br>(valor 0 interrompe)</html>"));
          tot += n;
+            
             if (n != 0) {
               totValores += 1;  
-            } else if (n % 2 == 0) {
+            }
+            
+            if (n % 2 == 0 && n != 0) {
                 totPar += 1;
-            } else if (n % 2 == 1) {
+            }
+            
+            if (n % 2 == 1) {
                 totImpar += 1;
-            } else if (n > 100) {
+            }
+            
+            if (n > 100) {
                 maiorq100 += 1;
             }
       } while (n != 0);
@@ -44,7 +51,8 @@ public class ExercicioRepeticao {
       mValores = tot / totValores;
       
       JOptionPane.showMessageDialog(null, 
-              "<html>Resultado: <br> <hr> <br> "
+              "<html>Resultado: <br> <hr> <br> " 
+                      + "Soma dos valores: " + tot + "<br>"
                       + "Total de Valores: " + totValores + "<br>"
                       + "Total de Pares: " + totPar + "<br>"
                       + "Total de Ímpares: " + totImpar + "<br>"
